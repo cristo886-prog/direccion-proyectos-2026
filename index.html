@@ -138,8 +138,18 @@ dialog{padding:19px 17px;border-radius:16px;width:95vw}.dialogtop{top:-19px;padd
 .team button b{margin-left:5px}
 .teamstrip{padding:0}
 @media(max-width:760px){.team-heading{padding:12px;gap:6px}.team-heading #selectedTeamLabel{font-size:11px}.team{display:flex;flex-wrap:wrap;padding:10px;max-height:none;overflow:visible;gap:6px}.team button{font-size:11px;min-height:39px;padding:8px 10px;white-space:normal}.team-selector-label{font-size:9px}}
+</style><style id="deliverables-design">
+.resource-entry{display:flex;align-items:center;gap:10px;width:100%;margin:20px 0 4px;padding:12px;background:#edf2fc;color:#315b9f;border:1px solid #dbe5f7;border-radius:11px;text-align:left;font-size:12px}
+.resource-project{padding:24px;margin:0 0 20px;background:#fff;border:1px solid var(--line);border-top:3px solid var(--tone);border-radius:15px}
+.resource-heading{display:flex;align-items:center;gap:12px}.resource-heading>div{flex:1;min-width:0}.resource-heading h2{font-size:19px;margin:0 0 2px}.resource-heading p{font-size:11px;color:var(--muted);margin:0}.resource-heading button{font-size:11px;color:var(--tone)}
+.resource-help{font-size:12px;color:#606c80;line-height:1.8;margin:17px 0 20px}
+.resource-category{padding:15px 0;border-top:1px solid var(--line)}.resource-category h3{font-size:11px;color:#65728a;text-transform:uppercase;letter-spacing:.8px;margin:0 0 11px}
+.resource-links{display:flex;flex-wrap:wrap;gap:8px}.resource-links .pill{font-size:12px;padding:11px 14px}
+.resource-mails{margin-top:16px;border-top:1px solid var(--line);padding-top:14px}.resource-mails summary{cursor:pointer;color:#3564b8;font-size:12px;font-weight:600}.resource-mails p{font-size:11px;color:var(--muted);margin:12px 0}
+.teamstrip[hidden]{display:none!important}
+@media(max-width:760px){.resource-entry{width:auto;margin:13px 0 0;display:inline-flex;font-size:11px;min-height:38px}.resource-project{padding:17px}.resource-heading{gap:9px;flex-wrap:wrap}.resource-heading h2{font-size:16px}.resource-heading button{padding:8px 10px}.resource-links{display:grid;grid-template-columns:1fr}.resource-links .pill{font-size:12px;justify-content:space-between}.resource-help{font-size:12px}.resource-heading .segment-symbol{display:none}}
 </style></head><body>
-<aside><a href="#inicio" class="brand" data-project="all">LILI<span>PINK</span><small>DIRECCIÓN DE PROYECTOS</small></a><div class="navtitle">ESPACIO DE TRABAJO</div><nav id="projectNav" aria-label="Proyectos"></nav><div class="sidebottom"><div class="cut"><i></i> Entrega de vacaciones</div><b>28 de octubre de 2026</b><p>Consulta, responsables y soportes.<br>Los avances operativos se registran en las fuentes compartidas.</p></div></aside>
+<aside><a href="#inicio" class="brand" data-project="all">LILI<span>PINK</span><small>DIRECCIÓN DE PROYECTOS</small></a><div class="navtitle">ESPACIO DE TRABAJO</div><button class="resource-entry" data-resources>↗ Entregables y accesos</button><nav id="projectNav" aria-label="Proyectos"></nav><div class="sidebottom"><div class="cut"><i></i> Entrega de vacaciones</div><b>28 de octubre de 2026</b><p>Consulta, responsables y soportes.<br>Los avances operativos se registran en las fuentes compartidas.</p></div></aside>
 <main><header><div class="eyebrow">DIRECCIÓN / ENTREGA Y SEGUIMIENTO</div><div class="headbuttons"><button id="executive" class="textbutton">Resumen para Verónica ↗</button><button id="copylink" class="darkbutton">Compartir enlace ↗</button></div></header>
 <details class="absence-banner"><summary><strong>Vacaciones de Cristian García · 30 de octubre al 13 de noviembre de 2026, inclusive.</strong></summary><div class="absence-content"><p>Apoyo directo en proyectos de producción LiliPrint: <strong>Lorena Espejo</strong> para validación y seguimiento de producción; <strong>Esteban Villalba</strong> para generar los códigos de proyectos en Flowtrack y apoyar su gestión administrativa.</p><div class="links"><a class="pill" href="mailto:lorena.espejo@fastmoda.com.co">Contactar a Lorena Espejo</a><a class="pill" href="mailto:esteban.villalba@fastmoda.com.co">Contactar a Esteban Villalba</a></div></div></details>
 <section class="teamstrip"><div class="team-heading"><span class="team-selector-label">PERSONAS DEL PROYECTO</span><span id="selectedTeamLabel">Todo el equipo</span></div><div id="team" class="team" aria-label="Filtrar por persona"></div></section>
@@ -317,7 +327,7 @@ $('pageTitle').textContent=mode==='executive'?'Resumen para Verónica':selectedP
 $('pageSubtitle').textContent=mode==='executive'?'Lectura breve por proyecto, con acceso al detalle y a las fuentes.':selectedPerson?'Todas sus responsabilidades y los temas que recibe como información. Los informativos están identificados.':p?p.label+' · responsables, hitos y soportes de consulta.':project==='paused'?'Fuera del alcance de temporada, conservando responsables e instrucción.':'Consulta el trabajo por proyecto o por persona, y abre las instrucciones cuando tengas dudas.';
 $('stats').innerHTML=project==='gerencia'?stat('Pendientes Mantenimiento',18,'Ítems 23–40 · Control SOLPED')+stat('Arquitectura en revisión',1,'Sogamoso · visita técnica ADC')+stat('Aprobados por Sebastián',14,'Incluye Fontanar y Viva')+stat('No aprobados históricos',8,'Separados del aval por lluvias'):stat('Proyectos en esta entrega',p?1:6,'Bitácora, gerencia y operación')+stat('Tareas de acción',tasks.length-paused-info,'Según los filtros seleccionados')+stat('Temas informativos',info,'Resumen y contexto para consulta')+stat('Hitos con fecha',tasks.filter(t=>t.date&&t.status!=='No se ejecuta').length,'Objetivos y dependencias visibles');
 $('projectSummary').innerHTML=p&&mode!=='executive'?`<div class="summarybox" style="border-left-color:${p.color}"><h2>Lo esencial de ${esc(p.name)}</h2><ul>${p.summary.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${links(p.links)}${p.id==='bitacora'?'<p class="quickhelp">Levantamientos y auditorías por regional</p>'+auditLinks():''}</div>`:'';
-const tabs=[['overview','Vista general'],['tasks','Tareas'],['agenda','Agenda'],['doubts','Dudas y soportes'],...(project==='gerencia'?[['approvals','Aprobaciones']]:[]),...(project==='props'?[['manual','Manual de consulta']]:[])];
+const tabs=[['overview','Vista general'],['tasks','Tareas'],['agenda','Agenda'],['doubts','Dudas y soportes'],['deliverables','Entregables y accesos'],...(project==='gerencia'?[['approvals','Aprobaciones']]:[]),...(project==='props'?[['manual','Manual de consulta']]:[])];
 $('tabs').innerHTML=tabs.map(([id,label])=>`<button data-mode="${id}" class="${mode===id?'selected':''}">${label}</button>`).join('');
 $('stats').style.display=['manual','doubts'].includes(mode)?'none':'grid';$('filters').style.display=mode==='executive'?'none':'flex';$('status').style.display=['approvals','manual','doubts'].includes(mode)?'none':'';
 $('listmeta').innerHTML=`<span>${tasks.length} tareas en la selección${selectedPerson?' · '+esc(selectedPerson):''}</span><span>Consulta → ejecuta → registra en la fuente compartida</span>`;
@@ -431,5 +441,91 @@ renderAgenda=function(tasks){
  cards.forEach(c=>grid.append(c));$('content').append(grid);
 };
 
+
+function projectResources(p){
+ const records=[];
+ const add=(label,url,category='')=>{
+  if(!url||records.some(r=>r.url===url))return;
+  if(/productividad/i.test(label+' '+url))return;
+  const kind=category||(/github\.io|chatgpt\.site/.test(url)?'Dashboards':/spreadsheets|forms\./.test(url)?'Hojas y formularios':url==='#manual'?'Manuales':'Documentos y referencias');
+  records.push({label,url,category:kind});
+ };
+ (p.links||[]).forEach(([label,url])=>add(label,url));
+ const ts=HUBTASKS.filter(t=>t.project===p.id);
+ ts.forEach(t=>{
+  (t.links||[]).forEach(([label,url])=>add(label,url));
+  if(t.report){add('CE-DP-FT-02 · respuestas de despachos y devoluciones',REPORT);add('Formulario de traslado y devolución',FORM)}
+  if(t.quote)add('Cotización de reparaciones', 'https://drive.google.com/file/d/1QTOL-6QOJk2U9K7oxmHVY_tzerW56axs/view');
+  if(t.render)add('Render anterior de Toberín · referencia por actualizar','https://drive.google.com/file/d/1Q0GkXusp41f1sPsi70O66I72mpASF83P/view');
+  if(t.type==='Cajones'){
+   add('Cotización · 70 cajones','https://drive.google.com/file/d/1Mu_AcRcbuLzTV8JmK8SdTzNPZ_mrw5lf/view');
+   add('Cotización · 18 cajones','https://drive.google.com/file/d/1NGtDi_3xHWPNTaDfAuOnDr1q4zukxjto/view');
+   add('Cotización de empaque · COT 0052','https://drive.google.com/file/d/1QKviOGb_DB2GRSdRFtrj-aYINa1tB7T2/view');
+  }
+  if(t.type==='Pintura temporada')add('Cuadro de pintura de temporada','https://docs.google.com/spreadsheets/d/1zQdrqRZOC7NdX9XAVe8KfgJ_EwgSmyUjGNiudMOXQsY/edit?gid=490295309#gid=490295309');
+ });
+ if(p.id==='bitacora'||p.id==='props')AUDITS.forEach(([name,id])=>add('Auditoría · '+name,'https://docs.google.com/spreadsheets/d/'+id+'/edit#gid=0','Auditorías regionales'));
+ return records;
+}
+const RESOURCE_HELP={
+ bitacora:'Consulta el dashboard y el consolidado aprobado. Para validar entregas, abre la auditoría de tu regional y completa F: guía; G: cantidad realmente recibida; H: confirmación con tienda; I: enlace de evidencia. Usa el formulario para traslados y devoluciones.',
+ gerencia:'Consulta las decisiones en Control SOLPED y el dashboard de aprobaciones. Registra la decisión y su fecha en la fuente compartida. Los demás dashboards se incluyen como accesos de apoyo para su actualización.',
+ arquitectura:'Consulta aprobaciones, el resumen de Toberín, los renders de referencia y el soporte normativo. El render anterior es una referencia pendiente de actualización.',
+ outlets:'Abre Tiendas para el alcance y la recepción; Costos y cotizaciones para el comparativo y sus soportes. La aprobación actual cubre la fachada externa; el branding interior se cotiza por separado.',
+ campanas:'Accede a las sábanas de Navidad, Black Days y Crucero por marca. Estas hojas son los soportes disponibles; no sustituyen los archivos específicos de auditoría de recepción.',
+ props:'Abre la biblioteca y el manual para consultar las referencias. Para seguir la entrega de PROPS, utiliza el consolidado y los levantamientos regionales; registra guía, cantidad recibida, confirmación y evidencia.',
+ aperturas:'El seguimiento de aperturas está registrado en este portal. Abre las instrucciones de Villa del Rosario y la validación de fechas y transporte desde los accesos de abajo.',
+ 'corners-beauty':'Consulta la implementación en el dashboard. Para actualizar, abre la hoja Intervención y diligencia la información de implementación, POP y enlace de fotografía en CR y CS, según la tarea compartida.'
+};
+function renderDeliverables(){
+ const ps=(project==='all'||project==='paused'?PROJECTS:PROJECTS.filter(p=>p.id===project));
+ const groups=ps.map(p=>({p,records:projectResources(p),tasks:HUBTASKS.filter(t=>t.project===p.id)}));
+ let resourceCount=0,shownProjects=0;
+ const sections=groups.map(({p,records,tasks})=>{
+  const matchProject=search&&norm(p.name+' '+p.label).includes(norm(search));
+  const rs=!search||matchProject?records:records.filter(r=>norm(r.label+' '+r.category).includes(norm(search)));
+  const ids=[...new Set([...(p.mails||[]),...tasks.flatMap(mailIds)])].filter(id=>EMAILS.some(e=>e.id===id));
+  const matchingMails=ids.filter(id=>!search||matchProject||norm(emailTitle(EMAILS.find(e=>e.id===id))).includes(norm(search)));
+  if(search&&!rs.length&&!matchingMails.length&&!matchProject)return '';
+  shownProjects++;resourceCount+=rs.length;
+  const cats=[...new Set(rs.map(r=>r.category))];
+  const pending=p.id==='campanas'?'<div class="notice warning"><strong>Auditorías de recepción · enlace por confirmar</strong><br>Los archivos o pestañas exactos de recepción de Black Days y Navidad siguen pendientes de confirmar. Las sábanas de campaña están disponibles abajo.</div>':p.id==='gerencia'?'<div class="notice warning"><strong>GeoVictoria · enlace pendiente</strong><br>Acceso indicado en el computador de Cristian. Esteban Villalba valida turnos y horas extra en acuerdo con Lorena Espejo.</div>':p.id==='props'?'<div class="notice"><strong>Video de armado de escalinatas</strong><br>Lorena Espejo y Omar deben grabarlo y compartirlo antes del despacho. Su enlace aún está pendiente de incorporar.</div>':'';
+  return `<article class="resource-project" id="accesos-${esc(p.id)}" style="--tone:${p.color}"><div class="resource-heading"><span class="segment-symbol">${p.icon}</span><div><h2>${esc(p.name)}</h2><p>${rs.length} accesos de consulta</p></div><button data-project="${p.id}">Ver tareas ↗</button></div>
+  <p class="resource-help">${esc(RESOURCE_HELP[p.id]||'Consulta los soportes del proyecto.')}</p>
+  ${cats.map(category=>`<section class="resource-category"><h3>${esc(category)}</h3><div class="resource-links">${rs.filter(r=>r.category===category).map(r=>link(r.label,r.url)).join('')}</div></section>`).join('')}
+  ${!records.length?'<div class="notice">No hay un dashboard o archivo externo enlazado para este proyecto. Consulta sus instrucciones aquí:</div>'+linksForTasks(tasks):''}
+  ${pending}
+  ${matchingMails.length?`<details class="resource-mails"><summary>Correos de soporte · ${matchingMails.length}</summary><p>Abre el contenido aquí o consulta el correo original y sus anexos desde Gmail.</p>${matchingMails.map(mailButton).join('')}</details>`:''}
+  </article>`;
+ }).join('');
+ $('content').innerHTML='<div class="notice resource-intro"><strong>Todos los soportes, en un solo lugar.</strong><br>Elige el proyecto en el menú o busca un dashboard, regional, hoja o documento. Los documentos de Google conservan sus permisos; si solicitan acceso, abre con tu cuenta laboral.</div>'+sections||'<div class="emptystate">No hay accesos con esta búsqueda.</div>';
+ if(!shownProjects)$('content').innerHTML='<div class="emptystate">No hay accesos con esta búsqueda. Prueba con el nombre del proyecto o de la regional.</div>';
+ $('listmeta').innerHTML=`<span>${shownProjects} proyectos · ${resourceCount} accesos de consulta</span><span>Directorio del proyecto · independiente de las tareas por persona</span>`;
+}
+function linksForTasks(tasks){return '<div class="links">'+tasks.map(t=>`<button data-task="${esc(t.id)}">${esc(t.title)} ↗</button>`).join('')+'</div>'}
+const renderWithResources=render;
+render=function(){
+ renderWithResources();
+ const active=mode==='deliverables';
+ document.querySelector('.teamstrip').hidden=active;
+ document.querySelector('#pending').parentElement.hidden=active;
+ if(!active)return;
+ $('pageTitle').textContent='Entregables y accesos';
+ $('breadcrumb').textContent='CONSULTA GENERAL / '+(PROJECTS.find(p=>p.id===project)?.name.toLocaleUpperCase('es')||'TODOS LOS PROYECTOS');
+ $('pageSubtitle').textContent='Dashboards, auditorías, hojas, formularios, cotizaciones y correos organizados por proyecto. Consulta los soportes directamente, sin buscar una tarea.';
+ $('stats').style.display='none';
+ $('projectSummary').innerHTML='';
+ $('status').style.display='none';
+ $('filters').style.display='flex';
+ document.querySelector('#pending').parentElement.hidden=true;
+ renderDeliverables();
+};
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-resources]')){
+  navigate('all','deliverables');location.hash='entregables';
+ }
+});
+
+if(location.hash==='#entregables'){project='all';mode='deliverables'}
 if(location.hash==='#manual'){project='props';mode='manual'}render();
 </script></body></html>
