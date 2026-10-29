@@ -3,15 +3,142 @@
 @media(max-width:1100px){aside{width:205px;padding:28px 15px}main{margin-left:205px;padding:0 25px}.introactions{flex-direction:column}.projectgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.stats{gap:8px}.stat{padding:15px}.manualgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.headbuttons .textbutton{display:none}}
 @media(max-width:760px){aside{position:static;width:auto;padding:17px 15px 0;border-right:0;border-bottom:1px solid var(--line);display:block}.brand{font-size:25px;margin:0 3px}.brand small,.navtitle,.sidebottom{display:none}#projectNav{display:flex;overflow:auto;gap:5px;padding:15px 0 12px}.projectbtn{width:auto;white-space:nowrap;padding:9px 10px;gap:7px;margin:0;font-size:10px}.projectbtn small{display:none}.projectbtn .navicon{width:15px;font-size:13px}main{margin:0;padding:0 16px}header{height:58px}.eyebrow{font-size:8px;letter-spacing:1.2px}.headbuttons button{font-size:10px;padding:8px}.teamstrip{padding:17px 0}.teamlabel{align-items:start;gap:9px}.teamlabel span{font-size:9px}.team{flex-wrap:nowrap;overflow:auto;padding-bottom:5px}.team button{white-space:nowrap;padding:8px 10px}.pageintro{display:block;padding:24px 0 17px}h1{font-size:27px}.pageintro p{font-size:11px}.introactions{flex-direction:row;margin-top:15px}.introactions .textbutton{margin-left:auto}.stats{grid-template-columns:1fr 1fr;gap:9px}.stat{padding:13px 16px}.stat b{font-size:25px}.projectgrid{gap:10px}.projectcard{padding:17px;min-height:190px}.projectcard h2{font-size:14px}.projectcard p{font-size:10px}.tabs{gap:19px}.filters{flex-wrap:wrap}.search{flex-basis:100%}.filters select{flex:1;max-width:none}.listmeta span:last-child{display:none}.task{grid-template-columns:28px 1fr;padding:15px;gap:11px}.taskicon{width:28px;height:28px;font-size:14px}.task h3{font-size:12px}.taskright{grid-column:2;text-align:left;display:flex;align-items:center;gap:10px}.taskright small{margin:0 auto 0 0}.taskright strong{font-size:10px}.taskright button{font-size:9px;padding:5px 9px}.summarybox{padding:18px}.summarybox ul{font-size:11px}.executive-card{padding:18px}.executive-card ul{font-size:11px}.manualgrid{grid-template-columns:1fr 1fr;gap:9px}.manualcard{padding:15px}.manualcard h3{font-size:11px}.manualcard p{font-size:9px}.manualcard footer{font-size:9px;display:block}.manualcard footer span{display:block;margin-top:5px}.detailtitle{font-size:21px}.detailgrid{grid-template-columns:1fr}.dialogtop{gap:5px}.dialogtop .eyebrow{font-size:7px}dialog{padding:18px}.emailmeta{font-size:10px}.mailbody{font-size:11px;padding:16px}.mediaframe{height:260px}footer{display:block;line-height:1.9}footer span{display:block;margin-top:5px}.tablewrap{margin:12px 0}.tablefilters{gap:6px}.tablefilters button{font-size:9px;padding:8px}}
 @media print{aside,header,.teamstrip,.introactions,.tabs,.filters,.taskright button,.openitems,dialog,#copylink{display:none!important}main{margin:0;padding:0}.pageintro{padding:12px 0}h1{font-size:25px}.projectcard,.task,.summarybox,.executive-card{break-inside:avoid}.stats{grid-template-columns:repeat(4,1fr)}.tablewrap{overflow:visible}table{min-width:0;font-size:8px}th,td{padding:7px}.projectgrid{grid-template-columns:repeat(2,1fr)}footer{font-size:8px}}
+</style><style id="workspace-design-v2">
+/* Unified workspace design · October 2026 */
+:root{--ink:#27283c;--muted:#697386;--paper:#f4f6fa;--line:#e3e7ef;--pink:#c51e68;--blue:#3564b8;--radius:16px}
+body{font-size:14px;line-height:1.6;background:var(--paper)}
+button,.pill{min-height:40px;border-radius:10px;font-size:12px;font-weight:600;transition:background .18s,border-color .18s,box-shadow .18s}
+button:hover,.pill:hover{box-shadow:0 3px 10px #26283c0a}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #bdcbee;outline-offset:3px}
+aside{width:244px;padding:30px 18px;background:#fff;overflow-y:auto}
+.brand{font-size:30px;letter-spacing:-1.6px}.brand small{font-size:9px;letter-spacing:1.5px}
+.navtitle{margin:34px 12px 12px;color:#7c8394;font-size:10px}
+.projectbtn{font-size:12px;min-height:46px;line-height:1.4;padding:11px 12px;gap:10px;margin:5px 0;border-radius:11px;color:#5d6578}
+.projectbtn.selected{background:#fceaf2;color:#ad185a;box-shadow:inset 3px 0 #c51e68}
+.projectbtn .navicon{background:#f3f5f9;border-radius:7px;height:27px;width:27px;display:grid;place-items:center;flex-shrink:0;font-size:17px}
+.projectbtn.selected .navicon{background:#f7d4e4}
+.projectbtn small{font-size:10px;background:#f0f2f7;padding:2px 7px;min-width:23px;text-align:center}
+.sidebottom{font-size:11px;padding:20px 10px 0;margin-top:24px}
+main{margin-left:244px;padding:0 36px 20px;max-width:1800px}
+header{height:76px;border:0}.eyebrow{font-size:10px;letter-spacing:1.3px}
+.headbuttons{gap:8px}header .textbutton{display:inline-flex!important;align-items:center;color:var(--blue);background:#eaf0fc;border:1px solid #d9e3f8}
+.darkbutton{background:var(--pink);border-color:var(--pink);color:#fff}.darkbutton:hover{background:#aa1558;border-color:#aa1558}
+.absence-banner{background:#fff;border:1px solid var(--line);border-radius:12px;margin:0 0 16px;border-left:4px solid var(--pink)}
+.absence-banner>summary{cursor:pointer;display:flex;align-items:center;gap:12px;padding:13px 18px;font-size:12px;list-style:none}
+.absence-banner>summary::-webkit-details-marker{display:none}
+.absence-banner>summary:before{content:'↗';background:#fceaf2;color:var(--pink);width:29px;height:29px;display:grid;place-items:center;border-radius:8px;flex-shrink:0}
+.absence-banner>summary:after{content:'Ver apoyos +';margin-left:auto;color:var(--pink);font-size:11px;white-space:nowrap}
+.absence-banner[open]>summary:after{content:'Cerrar −'}
+.absence-content{padding:0 18px 18px 60px;font-size:12px;color:var(--muted)}.absence-content p{margin-bottom:12px}
+.teamstrip{border:1px solid var(--line);border-radius:14px;background:white;padding:0;margin:0 0 25px}
+.teamstrip>summary{padding:16px 18px;cursor:pointer;display:flex;align-items:center;gap:14px;list-style:none}
+.teamstrip>summary::-webkit-details-marker{display:none}
+.team-selector-label{font-size:10px;font-weight:750;letter-spacing:1.4px;color:var(--muted)}
+#selectedTeamLabel{font-size:13px;font-weight:650;color:var(--ink)}
+.teamstrip>summary:after{content:'Cambiar integrante ⌄';margin-left:auto;font-size:11px;color:var(--blue)}
+.teamstrip[open]>summary{border-bottom:1px solid var(--line)}
+.team{padding:15px;display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:8px;max-height:330px;overflow:auto}
+.team button{text-align:left;display:flex;align-items:center;justify-content:space-between;gap:6px;white-space:normal;padding:10px 12px;font-size:12px;min-height:42px;background:#f8f9fc;border-color:#edf0f5;border-radius:9px}
+.team button.selected{background:#fceaf2;color:#ad185a;border-color:#f1bfd5}
+.team button b{font-size:10px;background:#fff;border-radius:5px;color:#787f90;padding:1px 6px}
+.pageintro{padding:4px 0 24px;align-items:flex-start}
+h1{font-size:34px;letter-spacing:-1px;line-height:1.18;margin:10px 0}
+.pageintro p{font-size:13px;max-width:720px;line-height:1.7}
+.introactions{gap:8px;padding-top:6px}.introactions button{font-size:11px}
+#helpBtn{background:#eaf0fc;color:var(--blue);border-color:#d9e3f8}
+.stats{gap:12px;margin-bottom:25px}.stat{border:1px solid var(--line);border-radius:13px;padding:16px 19px;box-shadow:0 2px 5px #282b4203;position:relative;overflow:hidden}
+.stat:before{content:'';position:absolute;top:16px;bottom:16px;left:0;width:3px;background:#c51e68}
+.stat:nth-child(2):before{background:#3564b8}.stat:nth-child(3):before{background:#2b8b76}.stat:nth-child(4):before{background:#bc853c}
+.stat span{font-size:11px;font-weight:600}.stat b{font-size:30px;margin:3px 0;line-height:1.2}.stat small{font-size:10px}
+.tabs{border:1px solid var(--line);background:#fff;border-radius:12px;padding:5px;gap:4px;margin:0 0 17px}
+.tabs button{padding:9px 17px;min-height:39px;border:0;border-radius:8px;font-size:12px;color:#667085}
+.tabs button.selected{background:#fceaf2;color:#b21c60;border:0}
+.filters{gap:9px;margin-bottom:12px}.search{border-radius:11px;padding:0 14px}.search input{font-size:12px;padding:12px 0;min-height:44px}
+.filters select{font-size:12px;padding:10px 12px;max-width:220px;border-radius:10px}.filters>button{font-size:11px;color:#697386;background:transparent}
+.listmeta{font-size:11px;margin:17px 0 15px}
+.projectgrid{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-bottom:30px}
+.projectcard{border-radius:16px;padding:23px;min-height:210px;border-top:3px solid var(--tone);transition:transform .18s,box-shadow .18s}
+.projectcard:hover{border-color:var(--tone);box-shadow:0 8px 26px #2528440b;transform:translateY(-2px)}
+.pcicon{width:40px;height:40px;border-radius:11px}.projectcard h2{font-size:17px;margin:18px 0 7px}.projectcard p{font-size:12px}.pcbottom{font-size:11px;border-top:1px solid #edf0f5;padding-top:13px;gap:10px}
+.work-segment{margin:0 0 22px;border:1px solid var(--line);border-radius:16px;background:#edf0f6;padding:0 15px 15px;scroll-margin-top:20px}
+.segment-head{display:flex;align-items:center;gap:12px;padding:17px 3px;list-style:none;cursor:pointer}
+.segment-head::-webkit-details-marker{display:none}
+.segment-symbol{width:37px;height:37px;border-radius:10px;background:#fff;display:grid;place-items:center;color:var(--tone);font-size:21px;flex-shrink:0}
+.segment-name{flex:1;min-width:0}.segment-name h2{font-size:16px;margin:0;color:var(--ink);letter-spacing:-.2px}.segment-name p{font-size:11px;color:var(--muted);margin:1px 0 0}
+.segment-count{font-size:11px;background:#fff;border-radius:8px;padding:5px 10px;color:var(--muted);white-space:nowrap}
+.segment-head:after{content:'−';color:#727c90;font-size:20px;padding:0 5px}.work-segment:not([open])>.segment-head:after{content:'+'}
+.task-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.task{margin:0;padding:19px;display:flex;flex-direction:column;gap:12px;border-radius:12px;border:1px solid #e0e5ee;box-shadow:0 2px 3px #272c4003;cursor:default;min-width:0}
+.task:hover{border-color:#b7c2d8;box-shadow:0 4px 12px #272c4008}
+.task-topline{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.task-type{font-size:10px;font-weight:700;color:var(--tone);letter-spacing:.3px}
+.task-topline .badge{margin:0 0 0 auto}
+.task h3{font-size:15px;line-height:1.45;font-weight:700;letter-spacing:-.15px;margin:0;color:#27283c}
+.task p{font-size:12px;margin:0;color:#697386;line-height:1.65}
+.task-people{display:flex;align-items:flex-start;gap:8px;font-size:11px;color:#647083;margin-top:auto;padding-top:3px;line-height:1.7}
+.task-people b{font-weight:650;color:#445368;flex-shrink:0}
+.task-footer{display:flex;align-items:center;gap:12px;padding-top:13px;border-top:1px solid #edf0f5}
+.task-date{margin-right:auto;min-width:0}.task-date strong{font-size:12px;display:block;color:#49536a}.task-date small{font-size:10px;color:#7a8395}
+.task-footer button{background:#c51e68;border-color:#c51e68;color:white;font-size:11px;min-height:38px;padding:8px 14px;white-space:nowrap}
+.task-footer button:hover{background:#a91859;border-color:#a91859;color:white}
+.badge{font-size:10px;border-radius:6px;padding:4px 8px;line-height:1.5;background:#f0f2f7;color:#6a7184}
+.badge.warn{background:#fff2d9;color:#906018}.badge.shared{background:#e8f4ef;color:#236b57}.badge.info{background:#eaf0fc;color:#3564b8}.badge.paused{background:#f0ecf1;color:#786779}
+.info-segment{background:#edf2fb}.paused-segment{background:#f0edf2}
+.sectiontitle{font-size:20px;margin:26px 0 16px}
+.summarybox{border-radius:14px;padding:0;background:#fff;overflow:hidden}
+.summarybox>summary{padding:17px 20px;cursor:pointer;font-weight:650;font-size:13px}
+.summarybox .summary-content{padding:0 20px 20px}.summarybox ul{font-size:12px}
+.pill{padding:10px 13px;background:#edf2fc;border:1px solid #dce5f8;color:#3564b8;font-size:11px;max-width:100%;overflow-wrap:anywhere}
+.pill:after{color:#3564b8;flex-shrink:0}.pill:hover{background:#e2eafa;color:#264e95;border-color:#becff0}
+.executive-card,.supportcard{border-radius:14px;padding:23px}.executive-card h3{font-size:17px}.executive-card ul{color:#5c667b}
+.executive-card button{background:#fceaf2;color:#b21c60;border-color:#f3c5d9}
+.openitems{margin-top:30px;padding:18px 21px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.openitems>h2{font-size:14px;cursor:pointer;margin:0}.openitems>summary{cursor:pointer;font-size:14px;font-weight:650}
+.openitems details{font-size:12px;padding:13px 0}.openitems p{font-size:12px}
+dialog{width:min(900px,94vw);border-radius:20px;padding:25px 30px;max-height:90vh}
+.dialogtop{position:sticky;top:-25px;background:#fff;z-index:2;padding-top:9px;gap:8px}
+.dialogtop button{background:#f3f5fa;font-size:11px}.dialogtop #closeModal{background:#fceaf2;border-color:#f2ccdc;color:#b21c60}
+.detailtitle{font-size:28px;line-height:1.3;margin:25px 0 17px}
+.detailgrid{gap:12px;margin:22px 0}.detailbox{border:1px solid #e6eaf1;background:#f6f8fc;border-radius:12px;padding:18px;font-size:13px}
+.detailbox strong{font-size:10px}.detailtext{font-size:13px;line-height:1.9;color:#566176}
+.detailsub{font-size:15px;margin:26px 0 13px}.step{border:1px solid #e6eaf1;background:#fff;border-radius:10px;padding:14px;margin:8px 0;font-size:13px;line-height:1.8;gap:13px}
+.step>b{display:grid;place-items:center;background:#fceaf2;color:#b21c60;width:27px;height:27px;border-radius:8px;flex-shrink:0;margin:0}
+.instruction{font-size:12px;background:#f9f1f6;border-radius:10px;padding:18px}
+.doubtbox{background:#f5f8fe;border:1px solid #dce5f8;border-radius:14px;padding:22px}
+.doubtbox h3{color:#315b9f}.doubtbox>p{font-size:12px;line-height:1.8}.mailbtn{background:#fff;color:#3564b8;border-color:#dce5f8;font-size:11px;padding:12px;text-align:left;max-width:100%;overflow-wrap:anywhere}
+.mailbtn small{font-size:10px;color:#67768f;line-height:1.6}
+.mailbody{font-size:13px;border-radius:12px}.emailmeta{font-size:12px}
+.notice{font-size:12px;border-radius:12px;padding:17px 19px}
+.taskguide-table{min-width:0;width:100%}.taskguide-table td,.taskguide-table th{font-size:12px}
+footer{font-size:10px;margin-top:28px;color:#7c8595}
+@media(min-width:1500px){main{padding:0 50px 20px}.projectgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1150px){aside{width:216px;padding:25px 13px}main{margin-left:216px;padding:0 24px 20px}.projectbtn{font-size:11px}.task-grid{grid-template-columns:1fr}.projectgrid{grid-template-columns:repeat(2,minmax(0,1fr))}h1{font-size:30px}.introactions{flex-direction:column}.stat{padding:16px 13px}.pageintro{gap:15px}}
+@media(max-width:760px){aside{position:static;width:100%;padding:18px 16px 0;overflow:visible;display:block}.brand{font-size:26px}.brand small{display:block;font-size:8px}.navtitle,.sidebottom{display:none}#projectNav{padding:16px 0 12px;gap:6px}.projectbtn{font-size:11px;min-height:39px;padding:7px 10px;gap:7px;white-space:nowrap;margin:0;flex-shrink:0;width:auto}.projectbtn .navicon{width:22px;height:22px;font-size:14px}.projectbtn.selected{box-shadow:none}.projectbtn small{display:none}
+main{margin:0;padding:0 15px 18px}header{height:64px}.eyebrow{font-size:8px;letter-spacing:1px}.headbuttons .textbutton{display:none!important}.headbuttons button{font-size:11px;padding:8px 11px;min-height:38px}
+.absence-banner{margin-bottom:12px}.absence-banner>summary{font-size:11px;padding:12px;gap:9px;align-items:flex-start}.absence-banner>summary:before{width:24px;height:24px}.absence-banner>summary:after{font-size:0;content:'+';font-size:18px}.absence-banner[open]>summary:after{content:'−'}.absence-content{padding:0 14px 15px;font-size:12px}
+.teamstrip{margin-bottom:21px}.teamstrip>summary{padding:14px 13px;gap:9px;flex-wrap:wrap}.team-selector-label{font-size:9px}#selectedTeamLabel{font-size:12px}.teamstrip>summary:after{font-size:10px}.team{grid-template-columns:repeat(2,minmax(0,1fr));padding:10px;max-height:310px;gap:7px;flex-wrap:wrap}.team button{font-size:11px;white-space:normal;padding:9px;min-height:42px}
+.pageintro{display:block;padding:0 0 20px}h1{font-size:29px;letter-spacing:-.8px;margin:8px 0 10px}.pageintro p{font-size:12px}.introactions{flex-direction:row;gap:8px;margin-top:12px;padding:0}.introactions button{font-size:11px;padding:9px 11px}.introactions .textbutton{margin-left:0}
+.stats{gap:9px;margin-bottom:19px;grid-template-columns:repeat(2,1fr)}.stat{padding:13px 15px}.stat span{font-size:10px}.stat b{font-size:27px}.stat small{font-size:9px}
+.tabs{gap:3px;margin-bottom:13px;padding:4px}.tabs button{font-size:11px;min-height:38px;padding:9px 12px;flex-shrink:0}
+.filters{flex-wrap:wrap;gap:7px}.search{flex-basis:100%}.filters select{max-width:none;flex:1;font-size:11px}.filters>button{font-size:10px;padding:9px}.listmeta{font-size:10px;margin:14px 0}.listmeta span:last-child{display:none}
+.projectgrid{gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}.projectcard{min-height:192px;padding:16px;border-radius:13px}.projectcard h2{font-size:14px;line-height:1.4;margin:14px 0 7px}.projectcard p{font-size:11px;margin-bottom:14px}.pcicon{width:33px;height:33px;font-size:18px}.pcbottom{display:block;font-size:10px;padding-top:11px}.pcbottom b{display:block;margin-top:4px}
+.work-segment{padding:0 10px 10px;border-radius:13px;margin-bottom:17px}.segment-head{padding:14px 2px;gap:9px}.segment-symbol{width:30px;height:30px;font-size:17px;border-radius:8px}.segment-name h2{font-size:14px}.segment-name p{font-size:10px}.segment-count{font-size:10px;padding:4px 7px}.task-grid{grid-template-columns:1fr;gap:10px}
+.task{padding:16px;gap:11px;border-radius:11px}.task h3{font-size:14px;line-height:1.5}.task p{font-size:12px}.task-topline{gap:6px}.task-type{font-size:10px}.badge{font-size:9px;padding:4px 7px}.task-people{font-size:11px;display:block}.task-people b{display:inline;margin-right:4px}.task-footer{gap:8px}.task-footer button{font-size:11px;padding:8px 11px;min-height:38px}.task-date strong{font-size:12px}.task-date small{font-size:9px}
+.summarybox>summary{font-size:12px;padding:15px}.summarybox .summary-content{padding:0 15px 16px}.summarybox ul{font-size:12px}.pill{font-size:11px;padding:10px 12px}.links{gap:7px}
+dialog{padding:19px 17px;border-radius:16px;width:95vw}.dialogtop{top:-19px;padding-top:6px}.dialogtop .eyebrow{font-size:8px}.dialogtop button{font-size:10px;padding:8px;min-height:36px}.detailtitle{font-size:23px}.detailgrid{grid-template-columns:1fr}.detailbox{font-size:12px;padding:15px}.detailtext,.step{font-size:12px}.doubtbox{padding:16px}.instruction{font-size:12px}.taskguide-table{min-width:0}
+.openitems{padding:17px;margin-top:22px}.openitems>summary{font-size:13px}.openitems details{font-size:11px}.manualgrid{grid-template-columns:1fr 1fr}.mailbody{font-size:12px;padding:15px}footer{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+@media print{.absence-banner,.teamstrip,.openitems{display:none!important}.task-grid{grid-template-columns:1fr 1fr}.work-segment{break-inside:auto;background:#fff}.task{break-inside:avoid}.task-footer button{display:none}.task h3{font-size:12px}.task p,.task-people{font-size:10px}.summarybox .summary-content{display:block}main{margin:0;padding:0}.projectgrid{grid-template-columns:repeat(2,1fr)}}
 </style></head><body>
 <aside><a href="#inicio" class="brand" data-project="all">LILI<span>PINK</span><small>DIRECCIÓN DE PROYECTOS</small></a><div class="navtitle">ESPACIO DE TRABAJO</div><nav id="projectNav" aria-label="Proyectos"></nav><div class="sidebottom"><div class="cut"><i></i> Entrega de vacaciones</div><b>28 de octubre de 2026</b><p>Consulta, responsables y soportes.<br>Los avances operativos se registran en las fuentes compartidas.</p></div></aside>
 <main><header><div class="eyebrow">DIRECCIÓN / ENTREGA Y SEGUIMIENTO</div><div class="headbuttons"><button id="executive" class="textbutton">Resumen para Verónica ↗</button><button id="copylink" class="darkbutton">Compartir enlace ↗</button></div></header>
-<section class="notice" aria-label="Vacaciones y apoyo de producción"><strong>Vacaciones de Cristian García · 30 de octubre al 13 de noviembre de 2026, inclusive.</strong><p>Apoyo directo en proyectos de producción LiliPrint: <strong>Lorena Espejo</strong> para validación y seguimiento de producción; <strong>Esteban Villalba</strong> para generar los códigos de proyectos en Flowtrack y apoyar su gestión administrativa.</p><div class="links"><a class="pill" href="mailto:lorena.espejo@fastmoda.com.co">Contactar a Lorena Espejo</a><a class="pill" href="mailto:esteban.villalba@fastmoda.com.co">Contactar a Esteban Villalba</a></div></section>
-<section class="teamstrip"><div class="teamlabel"><b>PERSONAS</b><span>Toca un nombre para ver sus tareas en todos los proyectos.</span></div><div id="team" class="team" aria-label="Filtrar por persona"></div></section>
+<details class="absence-banner"><summary><strong>Vacaciones de Cristian García · 30 de octubre al 13 de noviembre de 2026, inclusive.</strong></summary><div class="absence-content"><p>Apoyo directo en proyectos de producción LiliPrint: <strong>Lorena Espejo</strong> para validación y seguimiento de producción; <strong>Esteban Villalba</strong> para generar los códigos de proyectos en Flowtrack y apoyar su gestión administrativa.</p><div class="links"><a class="pill" href="mailto:lorena.espejo@fastmoda.com.co">Contactar a Lorena Espejo</a><a class="pill" href="mailto:esteban.villalba@fastmoda.com.co">Contactar a Esteban Villalba</a></div></div></details>
+<details class="teamstrip"><summary><span class="team-selector-label">MI ESPACIO</span><span id="selectedTeamLabel">Todo el equipo</span></summary><div id="team" class="team" aria-label="Filtrar por persona"></div></details>
 <section class="pageintro"><div><div id="breadcrumb" class="eyebrow accent"></div><h1 id="pageTitle">Dirección de proyectos</h1><p id="pageSubtitle"></p></div><div class="introactions"><button id="helpBtn">¿Dudas? Ver soportes ↗</button><button id="printBtn" class="textbutton">Imprimir / PDF</button></div></section>
 <section id="stats" class="stats"></section><section id="projectSummary"></section><nav class="tabs" id="tabs" aria-label="Vistas"></nav>
 <section class="filters" id="filters"><label class="search"><span>⌕</span><input id="search" type="search" placeholder="Buscar tarea, tienda, persona o soporte…" aria-label="Buscar en proyectos"></label><select id="status" aria-label="Filtrar tareas"><option value="">Todos los estados</option><option value="accion">Acción pendiente</option><option value="fecha">Fecha por confirmar</option><option value="compartida">Tarea compartida</option><option value="informativo">Informativo para mí</option><option value="no">No se ejecuta</option></select><button id="clear">Limpiar filtros</button></section>
-<div id="listmeta" class="listmeta"></div><section id="content"></section><section id="pending" class="openitems"></section><footer><b>Dirección de proyectos · 2026</b><span>Corte documental: 28 oct · Consulta de fuentes: esta entrega. No actualiza cifras automáticamente.</span></footer></main>
+<div id="listmeta" class="listmeta"></div><section id="content"></section><details class="openitems"><summary>Pendientes por confirmar y accesos de consulta</summary><section id="pending"></section></details><footer><b>Dirección de proyectos · 2026</b><span>Corte documental: 28 oct · Consulta de fuentes: esta entrega. No actualiza cifras automáticamente.</span></footer></main>
 <dialog id="detail" aria-label="Detalle y soportes"><div class="dialogtop"><span class="eyebrow">DIRECCIÓN · DETALLE</span><button id="backModal" hidden>← Volver a la tarea</button><button id="closeModal">Cerrar ×</button></div><div id="detailbody"></div></dialog><div id="toast" role="status"></div>
 <script>const AUDITS = [
 ['Sur','19Sdd6Icb_0RPb72hLqj9KaA-hRoizjpD2ZN3bwfQjZQ'],
@@ -208,5 +335,93 @@ function toast(s){$('toast').textContent=s;$('toast').style.display='block';setT
 document.addEventListener('click',e=>{let n;if(n=e.target.closest('[data-mail]')){openEmail(n.dataset.mail);return}if(n=e.target.closest('[data-task]')){openTask(n.dataset.task);return}if(n=e.target.closest('[data-project]')){e.preventDefault();navigate(n.dataset.project);return}if(n=e.target.closest('[data-person]')){selectedPerson=n.dataset.person;project='all';mode=selectedPerson==='Verónica Espinosa'?'executive':selectedPerson?'tasks':'overview';search='';$('search').value='';status='';$('status').value='';render();return}if(n=e.target.closest('[data-mode]')){mode=n.dataset.mode;render();return}if(n=e.target.closest('[data-approval-filter]')){approvalFilter=n.dataset.approvalFilter;renderApprovals();return}if(n=e.target.closest('[data-approval]')){openApproval(n.dataset.approval);return}if(n=e.target.closest('[data-prop]')){openProp(n.dataset.prop);return}if(n=e.target.closest('[data-material]')){manualMaterial=n.dataset.material;renderManual();return}if(n=e.target.closest('[data-manual]')){e.preventDefault();$('detail').close();navigate('props','manual');return}if(e.target.closest('[data-go-approvals]')){$('detail').close();selectedPerson='';navigate('gerencia','approvals');return}});
 document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('article[tabindex],tr[tabindex]')){e.preventDefault();e.target.click()}});
 $('closeModal').addEventListener('click',()=>$('detail').close());$('backModal').addEventListener('click',()=>openTask(lastTask));$('detail').addEventListener('close',()=>lastTask='');$('helpBtn').addEventListener('click',()=>{mode='doubts';render()});$('executive').addEventListener('click',()=>{selectedPerson='Verónica Espinosa';project='all';mode='executive';render()});$('printBtn').addEventListener('click',()=>window.print());$('search').addEventListener('input',e=>{search=e.target.value;render()});$('status').addEventListener('change',e=>{status=e.target.value;render()});$('clear').addEventListener('click',()=>{search='';selectedPerson='';status='';$('search').value='';$('status').value='';render()});$('copylink').addEventListener('click',async()=>{if(!/^https?:$/.test(location.protocol)){toast('Comparte el archivo HTML descargado o usa el enlace web publicado.');return}try{await navigator.clipboard.writeText(location.origin+location.pathname);toast('Enlace copiado para compartir con el equipo.')}catch{toast('Copia el enlace desde la barra del navegador.')}});
+
+/* Presentation layer. Task records and source links are preserved. */
+function taskStatusClass(t){
+ if(t.status==='No se ejecuta')return 'paused';
+ if(/urgente|confirmar|aprobar|pendiente|requiere|validar/i.test(t.status))return 'warn';
+ return 'shared';
+}
+card=function(t){
+ const p=projectOf(t),info=isInfo(t);
+ return `<article class="task" style="--tone:${p.color};--tint:${p.color}10">
+ <div class="task-topline"><span class="task-type">${esc(t.type)}</span><span class="badge ${info?'info':taskStatusClass(t)}">${info?'Informativo · ':''}${esc(t.status)}</span></div>
+ <h3>${esc(t.title)}</h3>
+ <p>${esc(t.qty||t.window)}</p>
+ <div class="task-people"><b>${info?'Responsables:':t.people.length>1?'En equipo:':'Responsable:'}</b><span>${esc(t.people.join(' · ')||'Por asignar')}</span></div>
+ <div class="task-footer"><div class="task-date"><strong>${t.status==='No se ejecuta'?'Sin ejecución':shortDate(t.date)}</strong><small>${t.date?'Fecha objetivo · ver dependencia':'Consulta la fecha y dependencia'}</small></div><button data-task="${esc(t.id)}" aria-label="Abrir tarea y dudas: ${esc(t.title)}">Ver tarea y dudas ↗</button></div></article>`;
+};
+function segment(p,tasks,kind='',expanded=true){
+ const isInfoGroup=kind==='info',paused=kind==='paused';
+ return `<details class="work-segment ${isInfoGroup?'info-segment':paused?'paused-segment':''}" ${expanded?'open':''} style="--tone:${p?.color||'#697386'}">
+ <summary class="segment-head"><span class="segment-symbol">${isInfoGroup?'i':paused?'–':p.icon}</span><div class="segment-name"><h2>${isInfoGroup?'Para tu información':paused?'Fuera de ejecución':esc(p.name)}</h2><p>${isInfoGroup?'Seguimientos que recibes como contexto':paused?'Alcance conservado para consulta':esc(p.label)}</p></div><span class="segment-count">${tasks.length} ${tasks.length===1?'tarea':'tareas'}</span></summary>
+ <div class="task-grid">${tasks.map(card).join('')}</div></details>`;
+}
+renderTasks=function(tasks){
+ if(!tasks.length){$('content').innerHTML='<div class="emptystate">No hay tareas con estos filtros. Cambia la búsqueda o limpia los filtros.</div>';return}
+ const actions=tasks.filter(t=>t.status!=='No se ejecuta'&&!isInfo(t));
+ const informative=tasks.filter(t=>t.status!=='No se ejecuta'&&isInfo(t));
+ const paused=tasks.filter(t=>t.status==='No se ejecuta');
+ let body=PROJECTS.filter(p=>actions.some(t=>t.project===p.id)).map(p=>segment(p,actions.filter(t=>t.project===p.id))).join('');
+ if(informative.length)body+=segment(null,informative,'info',!actions.length);
+ if(paused.length)body+=segment(null,paused,'paused',project==='paused');
+ $('content').innerHTML=body;
+};
+const baseRender=render;
+render=function(){
+ baseRender();
+ const ts=selectedTasks();
+ $('selectedTeamLabel').textContent=selectedPerson||'Todo el equipo';
+ $('pageTitle').textContent=mode==='executive'?'Resumen para Verónica':selectedPerson?selectedPerson:project==='all'?'Dirección de proyectos':$('pageTitle').textContent;
+ if(selectedPerson&&mode!=='executive')$('pageSubtitle').textContent='Tu espacio de trabajo: revisa las tareas por proyecto, identifica con quién coordinas y abre las instrucciones y soportes de cada actividad.';
+ if(!selectedPerson&&project==='all'&&mode!=='executive')$('pageSubtitle').textContent='Elige tu nombre para consultar tus responsabilidades o entra a un proyecto para revisar el trabajo del equipo.';
+ if(project!=='gerencia')$('stats').innerHTML=stat('Proyectos',new Set(ts.map(t=>t.project)).size,'En la selección actual')+stat('Tareas de acción',ts.filter(t=>t.status!=='No se ejecuta'&&!isInfo(t)).length,'Responsabilidades asignadas')+stat('Tareas en equipo',ts.filter(t=>t.people.length>1&&t.status!=='No se ejecuta'&&!isInfo(t)).length,'Coordinación entre responsables')+stat('Hitos con fecha',ts.filter(t=>t.date&&t.status!=='No se ejecuta').length,'Consulta las dependencias');
+ const box=$('projectSummary').querySelector('.summarybox');
+ if(box){
+  const heading=box.querySelector('h2'),details=document.createElement('details');
+  details.className='summarybox';details.style.cssText=box.style.cssText;
+  const summary=document.createElement('summary');summary.textContent=heading.textContent+' · ver contexto y enlaces';heading.remove();
+  const content=document.createElement('div');content.className='summary-content';while(box.firstChild)content.append(box.firstChild);
+  details.append(summary,content);box.replaceWith(details);
+ }
+ $('listmeta').querySelector('span:last-child')?.replaceChildren(document.createTextNode('Instrucciones, fechas y soportes dentro de cada tarea'));
+ document.querySelectorAll('#team [data-person]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.person===selectedPerson));
+ document.querySelectorAll('#projectNav [data-project]').forEach(b=>b.setAttribute('aria-current',b.dataset.project===project?'page':'false'));
+ document.querySelectorAll('#tabs [data-mode]').forEach(b=>b.setAttribute('aria-pressed',b.dataset.mode===mode));
+};
+const baseOpenTask=openTask;
+openTask=function(id){
+ baseOpenTask(id);
+ const title=$('detailbody').querySelector('.doubtbox h3');
+ if(title)title.textContent='Dudas y soportes';
+ $('detailbody').querySelectorAll('table').forEach(t=>t.classList.add('taskguide-table'));
+};
+document.addEventListener('click',e=>{
+ if(e.target.closest('[data-person]')){
+ document.querySelector('.teamstrip').open=false;
+ $('pageTitle').scrollIntoView({behavior:'smooth',block:'start'});
+ }
+});
+
+
+const originalOverview=renderOverview;
+renderOverview=function(tasks){
+ originalOverview(tasks);
+ if(selectedPerson)return;
+ const content=$('content'),head=content.querySelector('.sectiontitle');
+ if(head){
+ const grid=document.createElement('div');grid.className='task-grid';
+ let next=head.nextElementSibling;
+ while(next){const current=next;next=next.nextElementSibling;grid.append(current)}
+ head.after(grid);
+ }
+};
+const originalAgenda=renderAgenda;
+renderAgenda=function(tasks){
+ originalAgenda(tasks);
+ const cards=[...$('content').querySelectorAll('.task')],grid=document.createElement('div');grid.className='task-grid';
+ cards.forEach(c=>grid.append(c));$('content').append(grid);
+};
+
 if(location.hash==='#manual'){project='props';mode='manual'}render();
 </script></body></html>
